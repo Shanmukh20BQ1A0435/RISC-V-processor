@@ -30,7 +30,8 @@ The New Problem: Because multiple instructions were now overlapping in the pipel
 
 Phase 3: Fixing the Hazards (The Final Design)
 To make the pipeline actually usable without breaking data or calculations, I added two clever control blocks:
-<img width="1024" height="646" alt="image" src="https://github.com/user-attachments/assets/af240c4d-6f64-433e-9f51-53244852a57f" />
+<img width="1024" height="646" alt="image" src="https://github.com/user-attachments/assets/a0470b3a-6640-4e3b-9b28-772a7e502261" />
+
 
 
 
