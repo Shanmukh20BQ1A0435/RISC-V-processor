@@ -2,7 +2,7 @@
 Design and implementation of a 5-stage RISC-V pipelined processor
 
 
-What is this project?
+
 I built a RISC-V processor from scratch and evolved it through three main design steps. It started as a basic single-cycle core, turned into a 5-stage pipelined processor to make it run faster, and finally got dedicated hardware blocks to fix pipeline hazards (data conflicts caused by running multiple instructions at once).
 
 
