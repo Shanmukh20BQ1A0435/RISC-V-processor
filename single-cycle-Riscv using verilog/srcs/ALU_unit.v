@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company:NIT SURAT
+// Engineer:CH.SHANMUKH 
 // 
 // Create Date: 07/12/2026 01:16:50 PM
 // Design Name: 
