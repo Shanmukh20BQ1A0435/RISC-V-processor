@@ -47,8 +47,3 @@ module tb_top;
     end
 
 endmodule
-
-module tb_top(
-
-    );
-endmodule
