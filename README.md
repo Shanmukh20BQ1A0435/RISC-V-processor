@@ -16,7 +16,8 @@ The 3 Phases of the Project
 
 Phase 1: Single-Cycle RISC-V Core
 First, I built a basic processor where every single instruction has to finish its entire job in just one clock cycle.
-<img width="1366" height="768" alt="risc (4)" src="https://github.com/user-attachments/assets/6de6a127-c63c-4922-a00c-2f8f8f489758" />
+<img width="1366" height="768" alt="single-cycle-riscv-image" src="https://github.com/user-attachments/assets/c0311ef6-a932-4735-b203-683dd9a69c71" />
+
 
 The Problem: It was slow. The clock speed had to wait for the absolute longest instruction (like loading data from memory) to finish before the next clock tick could happen. This created a major speed bottleneck.
 
