@@ -25,7 +25,7 @@ module instruction_mem (
     output [31:0] instruction_out
 );
 
-    reg [7:0] mem [0:255];
+    reg [31:0] mem [0:255];
 
     assign instruction_out = mem[read_address >> 2];
 
