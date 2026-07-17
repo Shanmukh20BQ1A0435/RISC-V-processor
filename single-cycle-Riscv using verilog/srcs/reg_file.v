@@ -49,7 +49,7 @@ module reg_file (
         end
     end
 
-    assign read_data_1 = (rs1 == 5'b0) ? 32'b0 : registers[rs1];
+    assign read_data_1 = (rs1 == 5'b0) ? 32'b0 : registers[rs1];//hardwire to zero both rs1,rs2
     assign read_data_2 = (rs2 == 5'b0) ? 32'b0 : registers[rs2];
 
 endmodule
