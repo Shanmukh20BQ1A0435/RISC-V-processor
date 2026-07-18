@@ -11,8 +11,8 @@
 // Tool Versions: 
 // Description: Top-level module for the pipelined RISC-V processor. It 
 //              interconnects the Fetch, Decode, Execute, and Memory stages, 
-//              implements the Write-Back multiplexing logic, and contains 
-//              the bypass/forwarding hazard unit.
+//              implements the Write-Back multiplexing logic.
+//   
 // 
 // Dependencies: fetch_cycle.v, decode_cycle.v, execute_cycle.v, memory_cycle.v
 // 
@@ -52,8 +52,7 @@ module riscv_top(
     // Write-Back Wires
     wire [31:0] ResultW;
 
-    // Hazard Unit Wires
-    reg [1:0] ForwardA_E, ForwardB_E;
+  
 
     // 1. FETCH STAGE
     
