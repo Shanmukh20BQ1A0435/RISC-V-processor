@@ -55,9 +55,8 @@ module riscv_top(
     // Hazard Unit Wires
     reg [1:0] ForwardA_E, ForwardB_E;
 
-    // =========================================================================
     // 1. FETCH STAGE
-    // =========================================================================
+    
     fetch_cycle fetch_stage (
         .clk(clk),
         .rst(rst),
@@ -68,9 +67,8 @@ module riscv_top(
         .PCPlus4D(PCPlus4D)
     );
 
-    // =========================================================================
     // 2. DECODE STAGE
-    // =========================================================================
+    
     decode_cycle decode_stage (
         .clk(clk),
         .rst(rst),
@@ -96,9 +94,9 @@ module riscv_top(
         .RS2_E(RS2_E)
     );
 
-    // =========================================================================
+
     // 3. EXECUTE STAGE
-    // =========================================================================
+
     execute_cycle execute_stage (
         .clk(clk),
         .rst(rst),
@@ -128,9 +126,9 @@ module riscv_top(
         .ForwardB_E(ForwardB_E)
     );
 
-    // =========================================================================
+    
     // 4. MEMORY STAGE
-    // =========================================================================
+    
     memory_cycle memory_stage (
         .clk(clk),
         .rst(rst),
@@ -149,15 +147,13 @@ module riscv_top(
         .ReadDataW(ReadDataW)
     );
 
-    // =========================================================================
+
     // 5. WRITE-BACK STAGE (Mux Selection)
-    // =========================================================================
     // ResultSrcW selects between ALU Result (0) and Read Data from Memory (1)
     assign ResultW = (ResultSrcW == 1'b1) ? ReadDataW : ALU_ResultW;
 
-    // =========================================================================
+    
     // 6. HAZARD FORWARDING UNIT LOGIC
-    // =========================================================================
     always @(*) begin
         // Operand A Forwarding Mux Logic
         if (((RS1_E == RD_M) && RegWriteM) && (RS1_E != 5'b00000)) begin
